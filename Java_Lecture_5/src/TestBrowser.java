@@ -1,0 +1,42 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class TestBrowser {
+	
+	public static String browser = "Firefox";
+	public static WebDriver driver;
+
+	public static void main(String[] args) {
+		
+		//2.44
+		//System.setProperty("webdriver.gecko.driver", "F:\\Projects\\Java\\MicrosoftWebDriver.exe");
+		
+		//FirefoxDriver driver = new FirefoxDriver();
+		//ChromeDriver driver = new ChromeDriver();
+		/*
+		System.setProperty("webdriver.ie.driver", "F:\\Projects\\Java\\IEDriverServer.exe");
+		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,  true);
+		capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+		
+		InternetExplorerDriver driver = new InternetExplorerDriver(capabilities);*/
+		//System.setProperty("webdriver.edge.driver", "F:\\Projects\\Java\\MicrosoftWebDriver.exe");
+		//EdgeDriver driver = new EdgeDriver();
+		
+		System.setProperty("webdriver.opera.driver", "F:\\Projects\\Java\\operadriver.exe");
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		OperaOptions options = new OperaOptions();
+		options.setBinary("C:\\Users\\anufriev.d\\AppData\\Local\\Programs\\Opera\\57.0.3098.106\\opera.exe");
+		capabilities.setCapability(OperaOptions.CAPABILITY, options);
+		OperaDriver driver = new OperaDriver(options);
+		driver.get("http://google.com");
+
+	}
+
+}

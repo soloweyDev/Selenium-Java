@@ -1,0 +1,43 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class TestBrowser {
+	
+	public static String browser = "Firefox";
+	public static WebDriver driver;
+
+	public static void main(String[] args) {
+		/*
+		//2.44
+		System.setProperty("webdriver.gecko.driver", "F:\\Projects\\Java\\Tutorials\\Java_Lecture_5\\IEDriverServer.exe");
+		
+		//FirefoxDriver driver = new FirefoxDriver();
+		//ChromeDriver driver = new ChromeDriver();
+		
+		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,  true);
+		capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+		
+		InternetExplorerDriver driver = new InternetExplorerDriver();
+		driver.get("http://google.com");*/
+
+		switch(browser)
+		{
+		case "Firefox":
+			WebDriverManager.
+			driver = new FirefoxDriver();
+			break;
+			
+		case "Chrome":
+			driver = new ChromeDriver();
+			break;
+			
+		case "InternetExplorer":
+			driver = new InternetExplorerDriver();
+			break;
+		}
+	}
+
+}
