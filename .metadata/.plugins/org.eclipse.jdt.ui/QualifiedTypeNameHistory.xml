@@ -25,4 +25,5 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.opera.OperaDriver"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.opera.OperaOptions"/>
+    <fullyQualifiedTypeName name="io.github.bonigarcia.wdm.WebDriverManager"/>
 </qualifiedTypeNameHistroy>
